@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #182238;
+}
+
+.app {
+  width: min(950px, 92%);
+  margin: 40px auto;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.badge {
+  display: inline-block;
+  background: #e8efff;
+  color: #2457c5;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 16px 0 8px;
+  font-size: 34px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+p {
+  color: #68748a;
+}
+
+.concepts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.concept {
+  background: #f7f9fc;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.concept h3 {
+  margin-top: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin: 18px 0;
+  flex-wrap: wrap;
+}
+
+.controls input {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px;
+  border: 1px solid #ccd4e2;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.controls button,
+.task button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #2457c5;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.controls button:hover,
+.task button:hover {
+  background: #17449f;
+}
+
+.task {
+  padding: 14px;
+  border: 1px solid #e0e5ee;
+  border-radius: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+}
+
+.done strong {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+@media (max-width: 650px) {
+  .concepts {
+    grid-template-columns: 1fr;
+  }
+
+  .task {
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
